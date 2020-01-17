@@ -1,8 +1,6 @@
 - [ ] Why would you use class component over function components (removing hooks from the question)?
 
-    Many companies still use Class components in their code bases. So it is important to know how to use them.
-
-    Class components have a bunch of functionality.
+    Many companies still use Class components in their code bases. So it is important to know how to use them. Class components have a bunch of functionality, and allow you to manipulate the state. 
 
 - [ ] Name three lifecycle methods and their purposes.
 
