@@ -12,12 +12,12 @@ class App extends React.Component {
       count: 0,
       apiData: []
     }
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
   }
 
 
   componentDidMount() {
-    document.title = `You clicked ${this.state.count} times`;
+    // document.title = `You clicked ${this.state.count} times`;
 
     axios
     .get('http://localhost:5000/api/players')
@@ -34,26 +34,21 @@ class App extends React.Component {
   }
 
   componentDidUpdate() {
-    document.title = `You clicked ${this.state.count} times`;
+    // document.title = `You clicked ${this.state.count} times`;
   }
 
-  handleClick() {
-    this.setState(state => ({
-      count: state.count + 1,
-    }));
-  }
+  // handleClick() {
+  //   this.setState(state => ({
+  //     count: state.count + 1,
+  //   }));
+  // }
 
   render(){
     return (
       <div className="App">
         <header className="App-header">
-          <p>You clicked {this.state.count} times</p>
-          <button onClick={this.handleClick}>
-            Click me
-          </button>
-          {/* <ul>
-            {this.state.apiData.map(item =>  <li>{item.name}</li>)}
-          </ul> */}
+          <h1>World Cup Search Queries</h1>
+
           <Players data={this.state.apiData} />
         </header>
       </div>

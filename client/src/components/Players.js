@@ -31,8 +31,7 @@ const Players = props => {
     const [darkMode, setDarkMode ] = useDarkMode(true);
 
 
-    const clickHandler = e => {
-        e.preventDefault();
+    const clickHandler = () => {
         setDarkMode(!darkMode);
     }
 
@@ -48,7 +47,7 @@ const Players = props => {
   
     return(
         <div className='cardContainer'>
-            <button className="darkModeSwitch" onClick={clickHandler}>Dark Mode Switch</button>
+<button className="darkModeSwitch" onClick={clickHandler}>{darkMode ? 'Dark Mode Switch' : 'Dark Mode Switch - ON'}</button>
             {props.data.map(item =>  
                 
                     <Card key={item.id} className={classes.card}>
