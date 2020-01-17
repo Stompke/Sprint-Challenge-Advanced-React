@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import axios from 'axios'
 import './App.css';
 
+import Players from './components/Players';
+
 class App extends React.Component {
   constructor(){
     super();
@@ -30,7 +32,7 @@ class App extends React.Component {
       console.log('oh no!!!', err)
     })
   }
-  
+
   componentDidUpdate() {
     document.title = `You clicked ${this.state.count} times`;
   }
@@ -49,9 +51,10 @@ class App extends React.Component {
           <button onClick={this.handleClick}>
             Click me
           </button>
-          <ul>
+          {/* <ul>
             {this.state.apiData.map(item =>  <li>{item.name}</li>)}
-          </ul>
+          </ul> */}
+          <Players data={this.state.apiData} />
         </header>
       </div>
     );

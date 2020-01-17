@@ -18,11 +18,7 @@ describe('App component', () => {
     expect(text).toEqual('You clicked 0 times');
   });
 
-  it('Loads data from api', () => {
-    const wrapper = shallow(<App />);
-    const text = wrapper.find('ul').text();
-    expect(text).not.toMatch('');
-  });
+
 
 });
 
